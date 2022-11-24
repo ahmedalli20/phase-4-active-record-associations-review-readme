@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_05_06_151732) do
     t.index ["tag_id"], name: "index_post_tags_on_tag_id"
   end
 
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_05_06_151732) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_posts_on_author_id"
   end
+
 
   create_table "profiles", force: :cascade do |t|
     t.string "username"
@@ -48,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_05_06_151732) do
     t.index ["author_id"], name: "index_profiles_on_author_id"
   end
 
+  
   create_table "tags", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
